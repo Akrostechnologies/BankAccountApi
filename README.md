@@ -10,7 +10,7 @@ Crear retiros de una cuenta
 Transferir dinero entre cuentas
 
 
-### Crédito Extra - Proceso de Diseño
+### Créditos Extra - Proceso de Diseño
 Para implementar la función de interés diario, necesitarás crear una función que se ejecute diariamente para calcular el interés ganado por cada titular de cuenta. También necesitarás crear una tabla de base de datos o un modelo de datos que rastree el saldo de la cuenta, la tasa de interés y la fecha del último cálculo de interés. La función debe calcular el interés ganado desde la última fecha de cálculo y actualizar el saldo de la cuenta en consecuencia.
 
 ## Instrucciones
