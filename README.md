@@ -29,6 +29,6 @@ Notas:
 ## Criterios de Evaluación
 - La implementación debe cumplir con todos los criterios de aceptación mencionados anteriormente.
 - El código debe estar bien organizado y ser fácil de leer.
-- Usa convenciones de nomenclatura apropiadas para variables, funciones y puntos de acceso.
+- Usa convenciones de nomenclatura apropiadas para variables, funciones y API.
 - El código debe estar bien documentado con comentarios claros y/o archivos README.
 - Aunque esto es un ejercicio, la implementación debe tratar de ser segura y proteger contra vulnerabilidades comunes como inyección SQL y ataques de scripting entre sitios (XSS).
