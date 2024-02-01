@@ -1,38 +1,34 @@
-# Bank Account Project
+# Proyecto de Cuenta Bancaria
+## Resumen
+Este ejercicio está diseñado para probar tu capacidad de crear una API RESTful para la gestión de cuentas bancarias. Deberás crear puntos de acceso que permitan a los usuarios obtener información de la cuenta, añadir depósitos, realizar retiros y transferir dinero entre cuentas. También necesitarás implementar un proceso para calcular el interés diario sobre los saldos de las cuentas.
 
-## Overview
+## Criterios de Aceptación
+Crear una API RESTful que permita a los usuarios:
+Obtener información de la cuenta bancaria, incluyendo saldo actual, lista de transacciones e interés ganado
+Añadir depósitos a una cuenta
+Crear retiros de una cuenta
+Transferir dinero entre cuentas
 
-This exercise is designed to test your ability to create a RESTful API for managing bank accounts. You will be required to create endpoints that allow users to retrieve account information, add deposits, create withdrawals, and transfer money between accounts. You will also need to implement a process for calculating daily interest on account balances.
 
-## Acceptance Criteria
+### Crédito Extra - Proceso de Diseño
+Para implementar la función de interés diario, necesitarás crear una función que se ejecute diariamente para calcular el interés ganado por cada titular de cuenta. También necesitarás crear una tabla de base de datos o un modelo de datos que rastree el saldo de la cuenta, la tasa de interés y la fecha del último cálculo de interés. La función debe calcular el interés ganado desde la última fecha de cálculo y actualizar el saldo de la cuenta en consecuencia.
 
-- Create a RESTful API that allows users to:
-  - Get bank account info, including current balance, transaction list, and interest earned
-  - Add deposits to an account
-  - Create withdrawals from an account
-- Transfer money between accounts
+## Instrucciones
+1. Clona este repositorio en tu máquina local.
+2. Implementa la API RESTful según los criterios de aceptación.
+3. Crea un modelo de datos o tabla de base de datos para rastrear los saldos de las cuentas, las tasas de interés y las fechas del último cálculo de interés.
+4. Implementa el proceso de cálculo de interés diario (ver sección de crédito extra arriba).
+5. Escribe pruebas para tu implementación
 
-### Extra Credit - Design Process
+Notas:
 
-To implement the daily interest feature, you will need to create a function that runs on a daily basis to calculate the interest earned by each account holder. You will also need to create a database table or data model that tracks the account balance, interest rate, and date of last interest calculation. The function should calculate the interest earned since the last calculation date and update the account balance accordingly.
+- Puedes modificar los modelos/arquitectura del proyecto a medida que resuelvas el problema para ayudar a escribir un código limpio. Esta solución es solo un punto de partida.
+- Este ejercicio no está destinado a ser completado totalmente en el límite de 2 horas, vamos a usar este tiempo para avanzar lo más que podamos. Concéntrate en la calidad del código, las pruebas y la comunicación mientras resuelves el problema.
 
-## Instructions
 
-1. Clone this repository to your local machine.
-2. Implement the RESTful API according to the acceptance criteria.
-3. Create a data model or database table to track account balances, interest rates, and last interest calculation dates.
-4. Implement the daily interest calculation process (see extra credit section above).
-5. Write tests for your implementation
-
-Notes:
-
-- You can modify the models/project architecture as you solve the problem to help write clean code. This solution is just a starting point.
-- This exercise is not meant to be fully completed in the 2 hour limit, we are going to use this time to go as far as we can. Focus on the code quality, tests, and communication while solving the problem.
-
-## Evaluation Criteria
-
-- The implementation should meet all of the acceptance criteria listed above.
-- The code should be well-organized and easy to read.
-- Use appropriate naming conventions for variables, functions, and endpoints.
-- The code should be well-documented with clear comments and/or README files.
-- Although this is an exercise, the implementation should try to be secure and protect against common vulnerabilities such as SQL injection and cross-site scripting (XSS) attacks.
+## Criterios de Evaluación
+- La implementación debe cumplir con todos los criterios de aceptación mencionados anteriormente.
+- El código debe estar bien organizado y ser fácil de leer.
+- Usa convenciones de nomenclatura apropiadas para variables, funciones y puntos de acceso.
+- El código debe estar bien documentado con comentarios claros y/o archivos README.
+- Aunque esto es un ejercicio, la implementación debe tratar de ser segura y proteger contra vulnerabilidades comunes como inyección SQL y ataques de scripting entre sitios (XSS).
