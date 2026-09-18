@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BankDbContext>(options => options.UseInMemoryDatabase(databaseName: "BankDB"));
 builder.Services.AddScoped<IBankAccountService, BankAccountService>();
+builder.Services.AddHostedService<DailyInterestBackgroundService>();
 
 var app = builder.Build();
 
