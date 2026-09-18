@@ -32,3 +32,27 @@ Notas:
 - Usa convenciones de nomenclatura apropiadas para variables, funciones y API.
 - El código debe estar bien documentado con comentarios claros y/o archivos README.
 - Aunque esto es un ejercicio, la implementación debe tratar de ser segura y proteger contra vulnerabilidades comunes como inyección SQL y ataques de scripting entre sitios (XSS).
+
+## API
+
+The API exposes these endpoints under `/BankAccount`:
+
+- `GET /BankAccount/{accountNumber}` returns account details and transactions.
+- `POST /BankAccount/{accountNumber}/deposit` with `{"amount":100.00}` deposits funds.
+- `POST /BankAccount/{accountNumber}/withdraw` with `{"amount":25.00}` withdraws funds.
+- `POST /BankAccount/transfer` with `{"sourceAccountNumber":"1234","destinationAccountNumber":"1235","amount":50.00}` transfers funds and returns the source account.
+
+A response includes fields such as `accountNumber`, `accountBalance`, `interestRate`, `interestEarned`, and `transactions`, for example:
+
+```json
+{
+  "accountNumber": "1234",
+  "accountBalance": 12395.12,
+  "interestEarned": 1.69,
+  "transactions": [
+    { "amount": 50.00, "type": "TransferOut", "timestamp": "2024-01-02T12:00:00Z" }
+  ]
+}
+```
+
+Daily interest is calculated as `round(balance * annualRate / 365 * days, 2)` using midpoint rounding away from zero. Run the API with `dotnet run --project src/Api` and run tests with `dotnet test`.
